@@ -1,4 +1,4 @@
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, Image } from "react-bootstrap";
 import { FaShoppingCart, FaUser } from "react-icons/fa";
 import { LinkContainer } from "react-router-bootstrap";
 import logo from "../assets/logo.png";
@@ -10,10 +10,11 @@ const Header = () => {
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>
-              <img
+              <Image
                 src={logo}
                 alt="logo"
-                style={{ width: "30px", height: "30px", borderRadius: "50%" }}
+                style={{ width: "30px", height: "30px" }}
+                roundedCircle
               />{" "}
               e-commerce
             </Navbar.Brand>

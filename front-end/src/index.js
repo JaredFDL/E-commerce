@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/styles/index.css";
 import App from "./App";
@@ -37,9 +39,11 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <RouterProvider router={router}>
-    <App />
-  </RouterProvider>
+  <Provider store={store}>
+    <RouterProvider router={router}>
+      <App />
+    </RouterProvider>
+  </Provider>
 );
 
 reportWebVitals();
