@@ -5,12 +5,15 @@ import { Provider } from "react-redux";
 import store from "./store";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/styles/index.css";
+import PrivateRoute from "./components/PrivateRoute";
 import App from "./App";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import Product from "./pages/Product";
+import Register from "./pages/Register";
 import reportWebVitals from "./reportWebVitals";
+import Shipping from "./pages/Shipping";
 
 const router = createBrowserRouter([
   {
@@ -26,12 +29,25 @@ const router = createBrowserRouter([
         element: <Login />,
       },
       {
+        path: "/register",
+        element: <Register />,
+      },
+      {
         path: "/cart",
         element: <Cart />,
       },
       {
         path: "/product/:pid",
         element: <Product />,
+      },
+      {
+        element: <PrivateRoute />,
+        children: [
+          {
+            path: "/shipping",
+            element: <Shipping />,
+          },
+        ],
       },
     ],
   },
