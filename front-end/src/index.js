@@ -12,8 +12,9 @@ import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import Product from "./pages/Product";
 import Register from "./pages/Register";
-import reportWebVitals from "./reportWebVitals";
 import Shipping from "./pages/Shipping";
+import Payment from "./pages/Payment";
+import PlaceOrders from "./pages/PlaceOrders";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,14 @@ const router = createBrowserRouter([
             path: "/shipping",
             element: <Shipping />,
           },
+          {
+            path: "/payment",
+            element: <Payment />,
+          },
+          {
+            path: "/placeorder",
+            element: <PlaceOrders />,
+          },
         ],
       },
     ],
@@ -61,5 +70,3 @@ root.render(
     </RouterProvider>
   </Provider>
 );
-
-reportWebVitals();

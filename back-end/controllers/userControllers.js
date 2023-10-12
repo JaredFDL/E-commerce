@@ -127,7 +127,7 @@ const getUserById = asyncHandler(async (req, res) => {
 });
 
 // @desc  Update user
-// @route PUT /api/users/:id
+// @route PATCH /api/users/:id
 // @access private/admin
 const updateUser = asyncHandler(async (req, res) => {
   res.send("update user");
